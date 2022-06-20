@@ -5,11 +5,7 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
 
         <script>
-            
-            function redirect(code) {
-                window.location.href = "lampful://" + code;
-            }
-        
+
             function GetURLParameter(sParam) {
 
                 var sPageURL = window.location.search.substring(1);
@@ -24,14 +20,11 @@
             }
 
             var code = getURLParameter('code');
-            redirect(code);
-
-            <meta http-equiv="refresh" content="5; url = lampful://${code}"/>
-
+            window.location.href = "lampful://?code=" + code;
+        
         </script>
 
-        
-        
+        <!-- <meta http-equiv="refresh" content="5; url = lampful://${code}"/>    -->
     </head>
 
     <!-- BODY -->
