@@ -5,11 +5,32 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
 
         <script>
-            var code = window.location.search.substring(1);
-            print(code);
+            
+            function redirect(code) {
+                window.location.href = "lampful://" + code;
+            }
+        
+            function GetURLParameter(sParam) {
+
+                var sPageURL = window.location.search.substring(1);
+                var sURLVariables = sPageURL.split('&');
+                for (var i = 0; i < sURLVariables.length; i++) {
+
+                    var sParameterName = sURLVariables[i].split('=');
+                    if (sParameterName[0] == sParam) {
+                        return sParameterName[1];
+                    }
+                }
+            }
+
+            var code = getURLParameter('code');
+            redirect(code);
+
+            <meta http-equiv="refresh" content="5; url = lampful://${code}"/>
+
         </script>
 
-        <meta http-equiv="refresh" content="5; url = lampful://" />
+        
         
     </head>
 
