@@ -4,12 +4,20 @@
         <title>CloudConnect Redirect</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
 
+        <script>
+            var code = window.location.search.substring(1);
+            print(code);
+        </script>
+
         <meta http-equiv="refresh" content="5; url = lampful://" />
         
     </head>
 
     <!-- BODY -->
-    <body background="black">
-        <h1>Hello World</h1>
+    <body>
+        <h1>Success</h1>
+
+        <a href="lampful://">Click here to go to the app if u aren't redirected automatically.</a>
+
     </body>
 </html>
